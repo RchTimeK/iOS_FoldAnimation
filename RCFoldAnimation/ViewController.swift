@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var count: Int = 10
+    var count: Int = 99
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +34,8 @@ class ViewController: UIViewController {
         countDownFCV.sequenceType = .reduce
         view.addSubview(countDownFCV)
 
-        let df = DateFormatter()
-        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
         // 倒计时截止时间
-        let endDate = df.date(from: "2023-06-13 18:00:00")!
+        let endDate = Date(timeInterval: 60*60, since: Date.now)
         
         
         // 时间
